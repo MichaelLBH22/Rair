@@ -47,7 +47,7 @@ export function WelcomeScreen({ onGetStarted, onLogin }: WelcomeScreenProps) {
               letterSpacing: '-0.01em'
             }}
           >
-            Let's be honest. Standards matter.
+            We're not a dating app. We have Standards.
           </p>
           <p 
             className="text-neutral-600 leading-relaxed"
@@ -58,7 +58,7 @@ export function WelcomeScreen({ onGetStarted, onLogin }: WelcomeScreenProps) {
               lineHeight: 1.6
             }}
           >
-            A sophisticated space for those who know the difference.
+            The World's 1st Exclusive Social Platform.
           </p>
           <p 
             className="text-neutral-900 leading-relaxed"
@@ -69,7 +69,7 @@ export function WelcomeScreen({ onGetStarted, onLogin }: WelcomeScreenProps) {
               lineHeight: 1.6
             }}
           >
-            Stop swiping. Start choosing.
+            Zero Swiping. Quality Connections.
           </p>
         </div>
 

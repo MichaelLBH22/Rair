@@ -2,6 +2,7 @@ import { User } from '../data/mockUsers';
 import { ProfileCard } from './ProfileCard';
 import { Bell, MessageCircle, User as UserIcon, Search, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { TheScene } from './TheScene';
 
 interface BrowseViewProps {
   users: User[];
@@ -17,7 +18,7 @@ interface BrowseViewProps {
 export function BrowseView({ users, onProfileClick, onVibeClick, onNotificationsClick, onMessagesClick, onMyProfileClick, unreadMessages, unreadNotifications = 0 }: BrowseViewProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
-  const [viewMode, setViewMode] = useState<'browse' | 'whosout'>('browse');
+  const [viewMode, setViewMode] = useState<'browse' | 'scene' | 'whosout'>('browse');
 
   // Filter users based on search query
   const filteredUsers = users.filter((user) => {
@@ -34,7 +35,9 @@ export function BrowseView({ users, onProfileClick, onVibeClick, onNotifications
   // Filter users based on view mode
   const displayedUsers = viewMode === 'whosout' 
     ? filteredUsers.filter(user => user.isOut) 
-    : filteredUsers;
+    : viewMode === 'browse' 
+    ? filteredUsers 
+    : [];
 
   return (
     <div className="min-h-screen bg-white md:bg-neutral-50">
@@ -212,6 +215,22 @@ export function BrowseView({ users, onProfileClick, onVibeClick, onNotifications
                 BROWSE
               </button>
               <button
+                onClick={() => setViewMode('scene')}
+                className={`px-6 py-2 transition-all ${
+                  viewMode === 'scene'
+                    ? 'bg-white text-black shadow-sm'
+                    : 'bg-transparent text-neutral-600 hover:text-black'
+                }`}
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '0.875rem',
+                  fontWeight: 400,
+                  letterSpacing: '0.15em'
+                }}
+              >
+                THE SCENE
+              </button>
+              <button
                 onClick={() => setViewMode('whosout')}
                 className={`px-6 py-2 transition-all ${
                   viewMode === 'whosout'
@@ -234,7 +253,9 @@ export function BrowseView({ users, onProfileClick, onVibeClick, onNotifications
 
       {/* Grid of Profile Cards */}
       <main className="max-w-7xl mx-auto px-4 py-4 md:px-6 md:py-12">
-        {displayedUsers.length === 0 ? (
+        {viewMode === 'scene' ? (
+          <TheScene onProfileClick={onProfileClick} />
+        ) : displayedUsers.length === 0 ? (
           <div className="text-center py-20">
             <Search className="w-16 h-16 text-neutral-300 mx-auto mb-4" />
             <h3
