@@ -30,6 +30,8 @@ export interface User {
   isOut?: boolean;
   currentLocation?: string;
   moments?: string[];
+  greekLife?: string;
+  chapter?: string;
 }
 
 export const AVAILABLE_VIBES: Vibe[] = [
@@ -73,6 +75,8 @@ export const mockUsers: User[] = [
     gender: 'Female',
     isOut: true,
     currentLocation: 'West Village',
+    greekLife: 'Kappa Kappa Gamma',
+    chapter: 'Beta Theta',
     moments: [
       'https://images.unsplash.com/photo-1763651958358-c71aa2da72f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuaWdodGxpZmUlMjBwYXJ0eSUyMGZyaWVuZHN8ZW58MXx8fHwxNzc0MDM5NjAwfDA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1632840766469-9897a845c514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwZGluaW5nJTIwd2luZXxlbnwxfHx8fDE3NzQwMzk2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -116,7 +120,9 @@ export const mockUsers: User[] = [
     isOnline: true,
     gender: 'Female',
     isOut: true,
-    currentLocation: 'South Beach'
+    currentLocation: 'South Beach',
+    greekLife: 'Alpha Chi Omega',
+    chapter: 'Gamma Delta'
   },
   {
     id: '2',
@@ -145,7 +151,9 @@ export const mockUsers: User[] = [
     interests: ['Travel', 'Business', 'Fitness', 'Fine Dining'],
     isOnline: true,
     isOut: true,
-    currentLocation: 'Soho'
+    currentLocation: 'Soho',
+    greekLife: 'Delta Gamma',
+    chapter: 'Alpha Epsilon'
   },
   {
     id: '3',
@@ -175,7 +183,9 @@ export const mockUsers: User[] = [
     ],
     interests: ['Photography', 'Travel', 'Yoga', 'Music Festivals'],
     isOnline: false,
-    featured: true
+    featured: true,
+    greekLife: 'Pi Beta Phi',
+    chapter: 'Zeta Iota'
   },
   {
     id: '4',
@@ -202,7 +212,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Business', 'Travel', 'Wine', 'Luxury Lifestyle'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Chi Omega',
+    chapter: 'Epsilon Phi'
   },
   {
     id: '5',
@@ -229,7 +241,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Tech', 'Fashion', 'Dancing', 'Wine Bars'],
-    isOnline: false
+    isOnline: false,
+    greekLife: 'Zeta Tau Alpha',
+    chapter: 'Theta Kappa'
   },
   {
     id: '6',
@@ -256,7 +270,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Music', 'Vinyl', 'Coffee', 'Live Shows'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Gamma Phi Beta',
+    chapter: 'Mu Sigma'
   },
   {
     id: '7',
@@ -283,7 +299,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Fashion', 'Nightlife', 'Art Galleries', 'Champagne'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Alpha Delta Pi',
+    chapter: 'Rho Tau'
   },
   {
     id: '8',
@@ -310,7 +328,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Modeling', 'Beach Life', 'Dancing', 'Sunset Parties'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Tri Delta',
+    chapter: 'Kappa Omega'
   },
   {
     id: '9',
@@ -337,7 +357,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Business', 'High Fashion', 'Real Estate', 'Fine Dining'],
-    isOnline: false
+    isOnline: false,
+    greekLife: 'Alpha Phi',
+    chapter: 'Nu Xi'
   },
   {
     id: '10',
@@ -364,7 +386,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Acting', 'Traveling', 'Yoga', 'Indie Films'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Kappa Alpha Theta',
+    chapter: 'Pi Lambda'
   },
   {
     id: '11',
@@ -391,7 +415,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Contemporary Art', 'Poetry', 'Coffee Culture', 'Museums'],
-    isOnline: false
+    isOnline: false,
+    greekLife: 'Sigma Kappa',
+    chapter: 'Eta Psi'
   },
   {
     id: '12',
@@ -418,7 +444,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Fitness', 'Nutrition', 'Beach Workouts', 'Wellness'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Alpha Omicron Pi',
+    chapter: 'Beta Sigma'
   },
   {
     id: '14',
@@ -445,7 +473,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Hiking', 'Tech', 'Coffee', 'Craft Beer'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Phi Mu',
+    chapter: 'Delta Tau'
   },
   {
     id: '15',
@@ -472,7 +502,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Baking', 'Books', 'Farmers Markets', 'Indie Music'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Alpha Gamma Delta',
+    chapter: 'Omega Upsilon'
   },
   {
     id: '16',
@@ -499,7 +531,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Rock Climbing', 'Skiing', 'Travel', 'Photography'],
-    isOnline: false
+    isOnline: false,
+    greekLife: 'Kappa Delta',
+    chapter: 'Alpha Beta'
   },
   {
     id: '17',
@@ -527,7 +561,9 @@ export const mockUsers: User[] = [
     ],
     interests: ['Fine Dining', 'Wine', 'Travel', 'Luxury Lifestyle'],
     isOnline: true,
-    featured: true
+    featured: true,
+    greekLife: 'Delta Delta Delta',
+    chapter: 'Gamma Chi'
   },
   {
     id: '18',
@@ -554,7 +590,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Music', 'Performing', 'Fashion', 'Soul Food'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Delta Sigma Theta',
+    chapter: 'Iota Alpha'
   },
   {
     id: '19',
@@ -582,12 +620,16 @@ export const mockUsers: User[] = [
     ],
     interests: ['Songwriting', 'Guitar', 'Live Music', 'Whiskey'],
     isOnline: false,
-    featured: true
+    featured: true,
+    greekLife: 'Theta Phi Alpha',
+    chapter: 'Zeta Rho'
   },
   {
     id: '20',
     name: 'Amara',
     age: 24,
+    height: '5\'6"',
+    weight: '122 lbs',
     location: 'Houston, TX',
     bio: 'Doctor by profession, adrenaline junkie by passion. I save lives and take risks in equal measure.',
     currentVibe: 'Serious',
@@ -607,7 +649,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Medicine', 'Skydiving', 'Rock Climbing', 'Travel'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Zeta Phi Beta',
+    chapter: 'Lambda Pi'
   },
   {
     id: '21',
@@ -635,12 +679,16 @@ export const mockUsers: User[] = [
     ],
     interests: ['Surfing', 'Beach Volleyball', 'Ukulele', 'Island Life'],
     isOnline: true,
-    featured: true
+    featured: true,
+    greekLife: 'Alpha Xi Delta',
+    chapter: 'Epsilon Nu'
   },
   {
     id: '22',
     name: 'Celeste',
     age: 26,
+    height: '5\'8"',
+    weight: '130 lbs',
     location: 'Phoenix, AZ',
     bio: 'Interior designer creating beautiful spaces. I believe your environment should reflect your truth.',
     currentVibe: 'Classy',
@@ -660,12 +708,16 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Design', 'Travel', 'Architecture', 'Wine Tasting'],
-    isOnline: false
+    isOnline: false,
+    greekLife: 'Sigma Delta Tau',
+    chapter: 'Theta Gamma'
   },
   {
     id: '23',
     name: 'River',
     age: 25,
+    height: '5\'7"',
+    weight: '126 lbs',
     location: 'Boulder, CO',
     bio: 'Environmental scientist fighting the good fight. Passionate about the planet and people who care.',
     currentVibe: 'Serious',
@@ -685,7 +737,9 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Sustainability', 'Hiking', 'Activism', 'Organic Living'],
-    isOnline: true
+    isOnline: true,
+    greekLife: 'Alpha Epsilon Phi',
+    chapter: 'Sigma Chi'
   },
   // Male Profiles
   {
@@ -715,7 +769,9 @@ export const mockUsers: User[] = [
     interests: ['Film', 'Travel', 'Fine Dining', 'Fitness'],
     isOnline: true,
     gender: 'Male',
-    verified: true
+    verified: true,
+    greekLife: 'Sigma Chi',
+    chapter: 'Alpha Delta'
   },
   {
     id: '102',
@@ -742,7 +798,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Surfing', 'Nightlife', 'Entrepreneurship', 'Travel'],
-    isOnline: false
+    isOnline: false,
+    gender: 'Male',
+    greekLife: 'Pi Kappa Alpha',
+    chapter: 'Beta Mu'
   },
   {
     id: '103',
@@ -769,7 +828,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Fine Dining', 'Wine', 'Art Galleries', 'Travel'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Kappa Sigma',
+    chapter: 'Gamma Eta'
   },
   {
     id: '104',
@@ -796,7 +858,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Music Production', 'Concerts', 'Coffee', 'Vinyl Records'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Phi Delta Theta',
+    chapter: 'Epsilon Zeta'
   },
   {
     id: '105',
@@ -825,7 +890,9 @@ export const mockUsers: User[] = [
     interests: ['Fitness', 'Nutrition', 'Hiking', 'Wellness'],
     isOnline: false,
     gender: 'Male',
-    verified: true
+    verified: true,
+    greekLife: 'Lambda Chi Alpha',
+    chapter: 'Theta Iota'
   },
   {
     id: '106',
@@ -852,7 +919,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Photography', 'Art', 'Fashion', 'Street Culture'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Sigma Alpha Epsilon',
+    chapter: 'Kappa Nu'
   },
   {
     id: '107',
@@ -879,7 +949,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Surfing', 'Tech', 'Beach Life', 'Travel'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Beta Theta Pi',
+    chapter: 'Omicron Psi'
   },
   {
     id: '108',
@@ -908,7 +981,9 @@ export const mockUsers: User[] = [
     interests: ['Nightlife', 'Business', 'Luxury Cars', 'Entertainment'],
     isOnline: false,
     gender: 'Male',
-    verified: true
+    verified: true,
+    greekLife: 'Kappa Alpha Order',
+    chapter: 'Delta Phi'
   },
   {
     id: '109',
@@ -935,7 +1010,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Architecture', 'Design', 'Coffee', 'Museums'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Theta Chi',
+    chapter: 'Zeta Omega'
   },
   {
     id: '110',
@@ -962,7 +1040,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Tattoo Art', 'Music', 'Skateboarding', 'Alternative Culture'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Delta Tau Delta',
+    chapter: 'Alpha Kappa'
   },
   {
     id: '111',
@@ -989,7 +1070,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Medicine', 'Running', 'Reading', 'Cooking'],
-    isOnline: false
+    isOnline: false,
+    gender: 'Male',
+    greekLife: 'Phi Gamma Delta',
+    chapter: 'Mu Rho'
   },
   {
     id: '112',
@@ -1016,7 +1100,10 @@ export const mockUsers: User[] = [
       }
     ],
     interests: ['Scuba Diving', 'Surfing', 'Marine Life', 'Island Living'],
-    isOnline: true
+    isOnline: true,
+    gender: 'Male',
+    greekLife: 'Sigma Nu',
+    chapter: 'Pi Upsilon'
   },
   {
     id: '113',

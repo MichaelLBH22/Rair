@@ -242,6 +242,54 @@ export function ProfileDetail({ user, onClose, onSendMessage, onFollow }: Profil
                     {user.weight}
                   </span>
                 </div>
+                {user.greekLife && (
+                  <div className="flex flex-col gap-2">
+                    <span
+                      className="text-neutral-500"
+                      style={{
+                        fontFamily: 'var(--font-sans)',
+                        fontSize: '0.875rem',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase'
+                      }}
+                    >
+                      {user.gender === 'Female' ? 'Sorority' : 'Fraternity'}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-sans)',
+                        fontSize: '1.5rem',
+                        fontWeight: 300
+                      }}
+                    >
+                      {user.greekLife}
+                    </span>
+                  </div>
+                )}
+                {user.chapter && (
+                  <div className="flex flex-col gap-2">
+                    <span
+                      className="text-neutral-500"
+                      style={{
+                        fontFamily: 'var(--font-sans)',
+                        fontSize: '0.875rem',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase'
+                      }}
+                    >
+                      Chapter
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-sans)',
+                        fontSize: '1.5rem',
+                        fontWeight: 300
+                      }}
+                    >
+                      {user.chapter}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
 
