@@ -251,6 +251,23 @@ export function BrowseView({ users, onProfileClick, onVibeClick, onNotifications
         </div>
       </header>
 
+      {/* Social Proof Banner */}
+      <div className="bg-black text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <p 
+            className="text-center"
+            style={{ 
+              fontFamily: 'var(--font-sans)',
+              fontSize: '0.875rem',
+              letterSpacing: '0.05em',
+              fontWeight: 500
+            }}
+          >
+            Over 1,000 Messages Have Been Sent
+          </p>
+        </div>
+      </div>
+
       {/* Grid of Profile Cards */}
       <main className="max-w-7xl mx-auto px-4 py-4 md:px-6 md:py-12">
         {viewMode === 'scene' ? (

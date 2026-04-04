@@ -17,7 +17,7 @@ export function WelcomeScreen({ onGetStarted, onLogin }: WelcomeScreenProps) {
             textTransform: 'uppercase'
           }}
         >
-          A new way to connect
+          Over 1,000 Connections Made Since Launch
         </p>
 
         {/* Main headline */}
